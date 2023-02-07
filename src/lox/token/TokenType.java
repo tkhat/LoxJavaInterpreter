@@ -1,4 +1,4 @@
-package lox.token;
+package token;
 
 public enum TokenType {
     /*single character tokens.*/

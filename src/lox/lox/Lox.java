@@ -1,7 +1,7 @@
 package lox;
 
-import lox.scanne.Scanner;
-import lox.token.Token;
+import scanner.Scanner;
+import token.Token;
 
 import java.io.BufferedReader;
 import java.io.IOException;

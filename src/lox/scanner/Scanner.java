@@ -1,15 +1,15 @@
-package lox.scanne;
+package scanner;
 
 import lox.Lox;
-import lox.token.Token;
-import lox.token.TokenType;
+import token.Token;
+import token.TokenType;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static lox.token.TokenType.*;
+import static token.TokenType.*;
 
 public class Scanner {
     private final String source;
