@@ -68,4 +68,17 @@ public class ScannerTest {
         assertEquals(tokens.get(37).getType(), TokenType.NIL);
         assertEquals(tokens.get(38).getType(), TokenType.EOF);
     }
+
+    @Test
+    public void testScanTokensForString(){
+        String source = "var;  print(\"Hello World!\");";
+        Scanner scanner = new Scanner(source);
+        List<Token> tokens = scanner.scanTokens();
+        assertEquals(tokens.get(0).getType(), TokenType.VAR);
+        assertEquals(tokens.get(1).getType(), TokenType.SEMICOLON);
+        assertEquals(tokens.get(2).getType(), TokenType.PRINT);
+        assertEquals(tokens.get(3).getType(), TokenType.LEFT_PAREN);
+        assertEquals(tokens.get(4).getType(), TokenType.STRING);
+        assertEquals(tokens.get(5).getType(), TokenType.RIGHT_PAREN);
+    }
 }
